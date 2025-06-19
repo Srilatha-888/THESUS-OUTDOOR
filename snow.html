@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thesus Snow Boots</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link rel="stylesheet" href="styles.css">
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -77,6 +81,55 @@
   font-size:14px;
   
 }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      /* margin: 50px; */
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 12px 40px 12px 40px;
+      border: 1px solid #999;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .close-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    /* Optional hover effects */
+    .search-icon:hover,
+    .close-icon:hover {
+      color: #000;
+    }
 
 
 .currency-dropdown{
@@ -157,29 +210,39 @@ h2 {
     .product-grid1 {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 2px;
+      padding-left: 150px;
+      padding-right:10px;
     }
+    
 
     .product {
       border: none;
       padding: 0;
       width: 350px;
-      border-radius: 10px;
+      border-radius: 2px;
       text-align: center;
       position: relative;
       background-color: transparent;
       margin-right: 25px;
     }
+  
 
     .product .image-wrapper {
       position: relative;
       overflow: hidden;
       border-radius: 10px;
     }
+    .image-wrapper img{
+      border: 10px;
+      gap: 40px;
+      display: flex;
+
+    }
 
     .product img {
       width: 100%;
-      border-radius: 20px;
+      border-radius: 10px;
       transition: all 0.3s ease;
     }
 
@@ -284,103 +347,7 @@ h2 {
   background:#0d2f26;
   
 }
-/* .footer {
-  background-color: #0e3b2f;
-  color: white;
-  padding: 40px 20px 20px;
-}
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.footer-column {
-  flex: 1;
-  min-width: 180px;
-  margin: 10px;
-}
-
-.footer-column h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
-}
-
-.brand h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-.social a{
-  color:#fff;
-  font-size:18px;
-  margin-right:10px;
-  transition:color .2s;
-  
-}
-.social a:hover{
-  color:#ccc;
-  
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 30px;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  font-size: 13px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.payment-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.payment-icons img {
-  height: 24px;
-  object-fit: contain;
-} */
 
 .footer{
   background:#0e3b2f;
@@ -403,7 +370,7 @@ h2 {
   
 }
 .column h3{
-  margin-bottom:20px;
+  margin-bottom:30px;
   font-size:20px;
   
 }
@@ -468,18 +435,6 @@ h2 {
   font-size:13px;
   display:flex;
   flex-wrap:wrap;
-  gap:6px;
-  justify-content:center;
-  
-}
-.footer-links a{
-  color:#fff;
-  text-decoration:none;
-  
-}
-.footer-links a:hover{
-  text-decoration:underline;
-
 }
 
 
@@ -544,23 +499,23 @@ label {
 <body>
   <div class="announcement-bar">Free shipping in North America</div>
  <nav class="navbar">
-  
-  <a href="thesus.html">
-      <img src="http://127.0.0.1:5500/images/THESUS-LOGO1.avif" alt="Thesus Logo" class="logo" />
+    <a href="/thesus.html">
+      <img src="images/THESUS-LOGO1.avif" alt="Thesus Logo" class="logo" />
     </a>
-
-   <ul class="nav-links">
     
+   <ul class="nav-links">
       <li><a href="#">Rain</a></li>
-      <li><a href="snow.html" class="active">Snow</a></li>
+      <li><a href="/snow.html" class="active">Snow</a></li>
       <li><a href="#">The Weekend Boot</a></li>
       <li><a href="#">Shop All</a></li>
       <li><a href="#">About&nbsp;Us</a></li>
     </ul>
 
     <div class="nav-icons">
+      
      
       <div class="currency-dropdown">
+        <!-- <button id="dropBtn" class="dropdown-toggle">INR ₹ | India ▾ </button> -->
         <select name="Cash" id="dropMenu1" >
           <option value="INR">INR ₹ | India</option>
           <option value="USD">USD $ | USA</option>
@@ -568,15 +523,56 @@ label {
           <option value="GBP">GBP £ | UK</option>
           <option value="JPY">JPY ¥ | Japan</option>
         </select>
+        
       </div>
-     <span class="icon"><img src="icons/search_28dp_000000_FILL0_wght400_GRAD0_opsz24.png"></span>
-      <span class="icon"><img src="icons/person_28dp_000000_FILL0_wght400_GRAD0_opsz24.png"></span>
-      <span class="icon"><img src="icons/local_mall_28dp_000000_FILL0_wght400_GRAD0_opsz24.png"></span>
+
+
+      <!-- Search Icon -->
+      <span class="icon" onclick="openSearchModal()">
+        <img src="./icons/search.png" style="cursor: pointer;">
+      </span>
+
+      <!-- Search Modal -->
+      <div id="searchModal" class="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="search-modal__content" tabindex="-1">
+          <form class="search-form" role="search" onsubmit="return handleSearch()">
+            <div class="search-input1">
+              <input
+                class="search-input"
+                id="Search-In-Modal"
+                type="search"
+                name="q"
+                placeholder="Search"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
+                autofocus
+              />
+              <span class="icon" onclick="openSearchModal()">
+                <img src="./icons/search.png" style="cursor: pointer;">
+              </span>
+            </div>
+            <button type="button" class="close-button" onclick="closeSearchModal()">X</button>
+          </form>
+        </div>
+      </div>
+
+
+
+
+
+      <span><a href="/login.html" class="icon">
+        <img src="icons/user.png" style="height: 20px;">
+      </a></span>
+      <span>
+      <a href="/cart.html" class="icon">
+        <img src="icons/shopping-bag.png" style="height: 20px;">
+      </a>
+      </span>
   
     </div>
   </nav>
-
-  <main>
     <h2>Snow</h2>
     <div class="top-bar">
   <!-- Left: Filter -->
@@ -623,16 +619,17 @@ label {
           onmouseout="this.src='https://thesusoutdoors.com/cdn/shop/files/city-walking-winter-boot_f5d66414-a377-41d8-a3bf-5cfb7813199c.png?v=1686604125&width=600'"/>
           <div class="badge">Sale</div>
         </div>
-        <div class="label">
-          <p><a href="#">The Weekend Boot Z in Grey</a></p>
-        </div>
-        
-        <div class="price-row">
-          <p class="old-price">RS. 22,100.00</p>
-          <p class="price">RS. 15,800.00</p>
-        </div>
-      </div>
+       <div class="product-container">
+  
+    <p class="product-title" style="margin-bottom: 15px;">The Weekend Boot Z in Grey</p>
+    <div class="price">
+      <span class="old-price">Rs. 22,200.00</span>
+      <span class="new-price">Rs. 16,000.00</span>
+    </div>
+  </div>
 
+  </div>
+</div>
       <!-- Product 3 -->
       <div class="product">
         <div class="image-wrapper">
@@ -641,15 +638,17 @@ label {
           onmouseout="this.src='https://thesusoutdoors.com/cdn/shop/files/winter-boots-city-black.png?v=1686668626&width=600'"/>
           <div class="badge">Sale</div>
         </div>
-        <div class="label">
-          <p><a href="#">The Weekend Boot Z in Black</a></p>
-        </div>
-        
-        <div class="price-row">
-          <p class="old-price">RS. 21,000.00</p>
-          <p class="price">RS. 18,000.00</p>
+        <div class="product-container">
+      <p class="product-title" style="margin-bottom: 15px;">The Weekend Boot Z in Black</p>
+         <div class="price">
+          <span class="old-price">RS. 21,000.00</span>
+          <span class="new-price">RS. 18,000.00</span>
         </div>
       </div>
+      </div>
+    </div>
+      
+      
 
       <!-- Product 4 (Sold Out) -->
       <div class="product">
@@ -659,17 +658,16 @@ label {
           onmouseout="this.src='https://thesusoutdoors.com/cdn/shop/files/WinterBeige.png?v=1699307925&width=600'"/>
           <div class="badge soldout">Sold out</div>
         </div>
-        <div class="label">
-          <p><a href="#">The Modern Winter Boot in Beige</a></p>
+        <div class="product-container">
+          <p class="product title" style="margin-bottom: 15px;">The Modern Winter Boot in Beige</p>
+        <div class="price">
+          <span class="old-price">RS. 27,400.00</span>
+          <span class="new-price">RS. 24,300.00</span>
         </div>
-        
-        <div class="price-row">
-          <p class="old-price">RS. 27,400.00</p>
-          <p class="price">RS. 24,300.00</p>
         </div>
-        
-        <button class="notify-btn">Notify me when available</button>
+      <button class="notify-btn">Notify me when available</button>
       </div>
+    </div>
 
       <!-- Product 5 -->
       <div class="product">
@@ -679,13 +677,15 @@ label {
           onmouseout="this.src='https://thesusoutdoors.com/cdn/shop/files/WinterBlack.png?v=1699307987&width=600'"/>
           <div class="badge">Sale</div>
         </div>
-        <div class="label">
-          <p><a href="#">The Modern Winter Boot in Black</a></p>
-        </div>
+        <div class="product-container">
+          <p class="product-title" style="margin-bottom: 15px;">The Modern Winter Boot in Black</p>
         
-        <div class="price-row">
-          <p class="old-price">RS. 27,400.00</p>
-          <p class="price">RS. 19,000.00</p>
+        
+        <div class="price">
+          <span class="old-price">RS. 27,400.00</span>
+          <span class="new-price">RS. 19,000.00</span>
+          </div>
+          </div>
         </div>
       </div>
     </main1>
@@ -761,20 +761,26 @@ label {
 " alt="shop"/>
         <img src="data:image/png;base64,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
 " alt="visa"/>
-    
+        <!-- Add more if needed -->
       </div>
-    
-
-    <div class="footer-links">
-      © 2025 Thesus™ Outdoors ·
-      <a href="#">Powered by Shopify</a> ·
-      <a href="#">Refund&nbsp;policy</a> ·
-      <a href="#">Privacy&nbsp;policy</a> ·
-      <a href="#">Terms&nbsp;of&nbsp;service</a> ·
-      <a href="#">Shipping&nbsp;policy</a> ·
-      <a href="#">Contact&nbsp;information</a>
-    </div>
+     
+      <div class="footer-links">
+        <span>© 2025, Thesus™ Outdoors</span>
+        <span>·</span>
+        <a href="#">Powered by Shopify</a>
+        <span>·</span>
+        <a href="#">Refund policy</a>
+        <span>·</span>
+        <a href="#">Privacy policy</a>
+        <span>·</span>
+        <a href="#">Terms of service</a>
+        <span>·</span>
+        <a href="#">Shipping policy</a>
+        <span>·</span>
+        <a href="#">Contact information</a>
+      </div>
   </footer>
 
+   <script src="script.js"></script>
 </body>
 </html>
